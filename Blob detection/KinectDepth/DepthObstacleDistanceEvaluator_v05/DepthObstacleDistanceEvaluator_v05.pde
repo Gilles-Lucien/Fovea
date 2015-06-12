@@ -43,6 +43,8 @@ void setup()
   theBlobDetection = new BlobDetection[int(level)];
   blobList  = new ArrayList<Blob>();
   index = new ArrayList<Float>();
+  
+  setup_vibrator();
 }
 
 void draw()
