@@ -52,7 +52,9 @@ void setup()
   // BlobDetection
   level = 3;
   float scale = 0.25; //ratio de reduction de l'image source
-  img = new PImage(floor(640 * scale), floor(480*scale)); //Copie de l'image source qui sera envooyé à la detection. Celle-ci est volontairement plus petite pour gagner en performance 
+  int width = 640;
+  int height = 480;
+  img = new PImage(floor(width * scale), floor(height*scale)); //Copie de l'image source qui sera envooyé à la detection. Celle-ci est volontairement plus petite pour gagner en performance 
   theBlobDetection = new BlobDetection[int(level)];
   blobList  = new ArrayList<Blob>();
   index = new ArrayList<Float>();
@@ -137,6 +139,15 @@ void draw()
   else
     port.write('I');     
 
+    pushStyle();
+    strokeWeight(1);
+    stroke(255, 255, 255);
+    noFill();
+    rect(0, 0, depth.width / 2, depth.height);
+        rect(depth.width / 2, 0, depth.width / 2, depth.height);
+
+    popStyle();
+ 
   
     drawBlobsAndEdges(depth); //dessine les blob
 
