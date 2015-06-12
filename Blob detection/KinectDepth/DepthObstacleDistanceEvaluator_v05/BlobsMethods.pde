@@ -23,7 +23,7 @@ void drawBlobsAndEdges(PImage source)
     float level = index.get(n);
     if (b0!=null) //Si blob existe
     {
-      drawCenter(false, b0, source);
+      drawCenter(true, b0, source);
       drawEdges(true, b0, source, level);
       drawBlobNumber(false, b0, n, source);
       drawBlob(true, b0, source);
