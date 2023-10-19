@@ -1,5 +1,5 @@
 import processing.serial.*; 
- // message test pour tuto git
+ 
  //rectangle 1
  float boxX;
  float boxY;
